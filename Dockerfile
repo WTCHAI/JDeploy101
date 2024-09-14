@@ -7,8 +7,9 @@ FROM python:3.12.3-alpine
 WORKDIR /app
 COPY . /app 
 
+# Run just once execute when doing build process 
 RUN pip install -r requirements.txt
 
-EXPOSE 7999 
-#cmd run 
+EXPOSE 8000 
+#cmd run when start services of container 
 CMD ["python", "main.py"]
